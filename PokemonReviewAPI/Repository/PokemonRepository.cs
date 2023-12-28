@@ -35,7 +35,7 @@ namespace PokemonReviewAPI.Repository
             return (decimal)review.Sum(r => r.Rating) / review.Count();
         }
 
-        public bool IsPokemonExists(int pokemonId)
+        public bool PokemonExists(int pokemonId)
         {
             return _context.Pokemon.Any(p => p.Id == pokemonId);
         }
