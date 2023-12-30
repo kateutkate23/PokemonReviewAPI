@@ -11,6 +11,7 @@ namespace PokemonReviewAPI.Repository
         {
             _context = context;
         }
+
         public ICollection<Review> GetAllReviews()
         {
             return _context.Reviews.OrderBy(review => review.Id).ToList();
@@ -29,6 +30,16 @@ namespace PokemonReviewAPI.Repository
         public bool ReviewExists(int reviewId)
         {
             return _context.Reviews.Any(r => r.Id == reviewId);
+        }
+        public bool CreateReview(Review review)
+        {
+            _context.Add(review);
+            return Save();
+        }
+
+        public bool Save()
+        {
+            return _context.SaveChanges() > 0;
         }
     }
 }

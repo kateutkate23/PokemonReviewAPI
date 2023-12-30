@@ -12,6 +12,7 @@ namespace PokemonReviewAPI.Repository
         {
             _context = context;
         }
+
         public ICollection<Reviewer> GetAllReviewers()
         {
             return _context.Reviewers.OrderBy(r => r.Id).ToList();
@@ -30,6 +31,17 @@ namespace PokemonReviewAPI.Repository
         public bool ReviewerExists(int reviewerId)
         {
             return _context.Reviewers.Any(r => r.Id == reviewerId);
+        }
+
+        public bool CreateReviewer(Reviewer reviewer)
+        {
+            _context.Add(reviewer);
+            return Save();
+        }
+
+        public bool Save()
+        {
+            return _context.SaveChanges() > 0;
         }
     }
 }
