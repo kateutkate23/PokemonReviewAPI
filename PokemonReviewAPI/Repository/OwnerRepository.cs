@@ -1,6 +1,7 @@
 ﻿using PokemonReviewAPI.Data;
 using PokemonReviewAPI.Interfaces;
 using PokemonReviewAPI.Models;
+using System.Diagnostics.Metrics;
 
 namespace PokemonReviewAPI.Repository
 {
@@ -11,6 +12,7 @@ namespace PokemonReviewAPI.Repository
         {
             _context = context;
         }
+
         public ICollection<Owner> GetAllOwners()
         {
             return _context.Owners.OrderBy(o => o.Id).ToList();
@@ -34,6 +36,17 @@ namespace PokemonReviewAPI.Repository
         public bool OwnerExists(int ownerId)
         {
             return _context.Owners.Any(o => o.Id == ownerId);
+        }
+
+        public bool CreateOwner(Owner owner)
+        {
+            _context.Add(owner);
+            return Save();
+        }
+
+        public bool Save()
+        {
+            return _context.SaveChanges() > 0;
         }
     }
 }
