@@ -2495,19 +2495,24 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\1\\.nuget\\packages\\": {}
+    "C:\\Users\\kate_utkate\\.nuget\\packages\\": {},
+    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\1\\Desktop\\projects\\PokemonReviewAPI\\PokemonReviewAPI\\PokemonReviewAPI.csproj",
+      "projectUniqueName": "C:\\Users\\kate_utkate\\Desktop\\projects\\PokemonReviewAPI\\PokemonReviewAPI\\PokemonReviewAPI.csproj",
       "projectName": "PokemonReviewAPI",
-      "projectPath": "C:\\Users\\1\\Desktop\\projects\\PokemonReviewAPI\\PokemonReviewAPI\\PokemonReviewAPI.csproj",
-      "packagesPath": "C:\\Users\\1\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\1\\Desktop\\projects\\PokemonReviewAPI\\PokemonReviewAPI\\obj\\",
+      "projectPath": "C:\\Users\\kate_utkate\\Desktop\\projects\\PokemonReviewAPI\\PokemonReviewAPI\\PokemonReviewAPI.csproj",
+      "packagesPath": "C:\\Users\\kate_utkate\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\kate_utkate\\Desktop\\projects\\PokemonReviewAPI\\PokemonReviewAPI\\obj\\",
       "projectStyle": "PackageReference",
+      "fallbackFolders": [
+        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+      ],
       "configFilePaths": [
-        "C:\\Users\\1\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\kate_utkate\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
