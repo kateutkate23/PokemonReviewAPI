@@ -43,5 +43,11 @@ namespace PokemonReviewAPI.Repository
         {
             return _context.SaveChanges() > 0;
         }
+
+        public bool UpdateReviewer(Reviewer reviewer)
+        {
+            _context.Update(reviewer);
+            return Save();
+        }
     }
 }

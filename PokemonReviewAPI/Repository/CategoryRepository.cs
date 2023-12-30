@@ -32,7 +32,7 @@ namespace PokemonReviewAPI.Repository
             return _context.PokemonCategories.Where(e => e.CategoryId == categoryId).Select(c => c.Pokemon).ToList();
         }
 
-        public bool IsCategoryExist(int id)
+        public bool CategoryExists(int id)
         {
             return _context.Categories.Any(c => c.Id == id);
         }
@@ -40,6 +40,12 @@ namespace PokemonReviewAPI.Repository
         public bool CreateCategory(Category category)
         {
             _context.Add(category);
+            return Save();
+        }
+
+        public bool UpdateCategory(Category category)
+        {
+            _context.Update(category);
             return Save();
         }
 
